@@ -347,7 +347,8 @@ def prepare_for_modeling(dataframe):
             if key != 'Original_index':
                 mol.SetProp(key, str(value))
 
-    apply_count_filter(props_df, ['Effect', 'Test_statistic', 'Duration_hours'])
+    apply_count_filter(props_df, ['Latin_name', 'Effect', 'Test_statistic', 'Duration_hours'])
+
     # Подготовка к кросс-валидации
     root = Tk()
     root.withdraw()
